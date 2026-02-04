@@ -4,7 +4,7 @@
 [![ASP.NET Core](https://img.shields.io/badge/ASP.NET_Core-8.0-512BD4)](https://dotnet.microsoft.com/apps/aspnet)
 [![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 ```text
-Тем: Создание приложения на основе класса WebApplication в ASP.NET Core
+Тема: Создание приложения на основе класса WebApplication в ASP.NET Core
 ```
 ```text
 Цель работы: Ознакомиться с базовыми шагами создания веб-приложения на основе класса
@@ -62,3 +62,6 @@ Repository/Service паттерны – разделение ответстве�
 <div align="center"><img width="148" height="34" alt="logo" src="https://github.com/user-attachments/assets/1ecfceb6-0999-4955-b38c-b66cd067c2c3" /></div>
 
  -->
+# 
+<div align="center"><img width="148" height="34" alt="logo" src="https://github.com/user-attachments/assets/1ecfceb6-0999-4955-b38c-b66cd067c2c3" /></div>
+
