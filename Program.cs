@@ -21,7 +21,7 @@ string CreateHtmlPage(string title, string content)
     html.AppendLine("            font-family: Arial, sans-serif;");
     html.AppendLine("            margin: 0;");
     html.AppendLine("            padding: 20px;");
-    html.AppendLine("            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);");
+    html.AppendLine("            background: linear-gradient(135deg, #990909 0%, #887b94 100%);");
     html.AppendLine("            min-height: 100vh;");
     html.AppendLine("        }");
     html.AppendLine("        .container {");
@@ -78,7 +78,7 @@ string CreateHtmlPage(string title, string content)
     html.AppendLine("            <a href='/about'>📝 О проекте</a>");
     html.AppendLine("            <a href='/aspnet'>🔄 ASP.NET</a>");
     html.AppendLine("            <a href='/university'>🏛 Университет</a>");
-    html.AppendLine("            <a href='/lab'>📊 Лабораторная</a>");
+    html.AppendLine("            <a href='/lab'>📊 О работе</a>");
     html.AppendLine("        </nav>");
     html.AppendLine($"        {content}");
     html.AppendLine("        <footer>");
@@ -160,7 +160,7 @@ app.MapGet("/university", () =>
         <div class='card'>
             <h2>Московский Политехнический Университет</h2>
             <p><strong>Факультет:</strong> Информационных технологий</p>
-            <p><strong>Кафедра:</strong> Информатики и информационных технологий</p>
+            <p><strong>Кафедра: ИиИТ</strong> </p>
             <p><strong>Направление:</strong> 09.03.02 «Информационные системы и технологии»</p>
         </div>
     ";
@@ -181,12 +181,11 @@ app.MapGet("/lab", () =>
                 <li>✅ Создание проекта на базе WebApplication</li>
                 <li>✅ Несколько минимальных страниц</li>
                 <li>✅ Использование ASP.NET Core</li>
-                <li>✅ Комментарии к ключевому коду</li>
             </ul>
         </div>
     ";
     
-    return Results.Text(CreateHtmlPage("Лабораторная работа", content), "text/html", System.Text.Encoding.UTF8);
+    return Results.Text(CreateHtmlPage("О работе", content), "text/html", System.Text.Encoding.UTF8);
 });
 
 app.Run();
