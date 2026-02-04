@@ -62,3 +62,6 @@ Repository/Service паттерны – разделение ответстве�
 <div align="center"><img width="148" height="34" alt="logo" src="https://github.com/user-attachments/assets/1ecfceb6-0999-4955-b38c-b66cd067c2c3" /></div>
 
  -->
+# 
+<div align="center"><img width="148" height="34" alt="logo" src="https://github.com/user-attachments/assets/1ecfceb6-0999-4955-b38c-b66cd067c2c3" /></div>
+
