@@ -2,7 +2,7 @@
 // Кондрашов Михаил, 241-331
 
 using Microsoft.Extensions.Hosting; 
-
+using Microsoft.Extensions.DependencyInjection; 
 
 // DI контейнер ASP.NET CORE
 var builder = Host.CreateApplicationBuilder(args); // команда для создания контейнера
