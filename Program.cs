@@ -44,8 +44,8 @@ public class StudentService : IStudentService
     
     public void ShowStudentInfo()
     {
-        _logger.Log("Показываю информацию о студенте...");
         Console.WriteLine("=== СТУДЕНТ ===");
+        Console.WriteLine("");
         Console.WriteLine("ФИО: Кондрашов Михаил Иванович");
         Console.WriteLine("Группа: 241-331");
         Console.WriteLine("Дата: 03.02.2026");
@@ -64,7 +64,9 @@ public class UniversityService : IUniversityService
     public void ShowUniversityInfo()
     {
         _logger.Log("Показываю информацию об университете...");
+        Console.WriteLine("");
         Console.WriteLine("=== УНИВЕРСИТЕТ ===");
+        Console.WriteLine("");
         Console.WriteLine("Московский Политехнический Университет");
         Console.WriteLine("Факультет: Информационных технологий");
     }
@@ -97,15 +99,18 @@ public class ConsoleApp
     
     public void Run()
     {
-        _logger.Log("Запуск приложения...");
-        Console.WriteLine("Лабораторная работа №2");
+        
+        Console.WriteLine("Лабораторная работа 2");
         
         while (true)
         {
-            Console.WriteLine("\n1. Информация о студенте");
+            Console.WriteLine("_____________________________");
+            Console.WriteLine("");
+            Console.WriteLine("1. Информация о студенте");
             Console.WriteLine("2. Информация об университете");
             Console.WriteLine("0. Выход");
             
+            Console.WriteLine("");
             Console.Write("Выберите: ");
             var choice = Console.ReadLine();
             
@@ -117,7 +122,6 @@ public class ConsoleApp
                 break;
         }
         
-        _logger.Log("Выход из приложения...");
+    
     }
 }
-
