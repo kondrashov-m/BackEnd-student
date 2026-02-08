@@ -7,7 +7,7 @@ using Microsoft.Extensions.DependencyInjection;
 // DI контейнер ASP.NET CORE
 var builder = Host.CreateApplicationBuilder(args); // команда для создания контейнера
 
-builder.Services.AddSingleton<ILogger, ConsoleLogger>();
+
 builder.Services.AddTransient<IStudentService, StudentService>();
 builder.Services.AddTransient<IUniversityService, UniversityService>();
 builder.Services.AddTransient<ConsoleApp>();
@@ -27,21 +27,11 @@ public interface IUniversityService
     void ShowUniversityInfo();
 }
 
-public interface ILogger
-{
-    void Log(string message);
-}
 
 // Реализации
 public class StudentService : IStudentService
 {
-    private readonly ILogger _logger;
-    
-    public StudentService(ILogger logger)
-    {
-        _logger = logger;
-    }
-    
+       
     public void ShowStudentInfo()
     {
         Console.WriteLine("=== СТУДЕНТ ===");
@@ -54,16 +44,8 @@ public class StudentService : IStudentService
 
 public class UniversityService : IUniversityService
 {
-    private readonly ILogger _logger;
-    
-    public UniversityService(ILogger logger)
-    {
-        _logger = logger;
-    }
-    
     public void ShowUniversityInfo()
     {
-        _logger.Log("Показываю информацию об университете...");
         Console.WriteLine("");
         Console.WriteLine("=== УНИВЕРСИТЕТ ===");
         Console.WriteLine("");
@@ -72,35 +54,26 @@ public class UniversityService : IUniversityService
     }
 }
 
-public class ConsoleLogger : ILogger
-{
-    public void Log(string message)
-    {
-        Console.WriteLine($"[LOG] {message}");
-    }
-}
 
 // Главное приложение
 public class ConsoleApp
 {
     private readonly IStudentService _studentService;
     private readonly IUniversityService _universityService;
-    private readonly ILogger _logger;
+
     
     public ConsoleApp(
         IStudentService studentService,
-        IUniversityService universityService,
-        ILogger logger)
+        IUniversityService universityService)
     {
         _studentService = studentService;
         _universityService = universityService;
-        _logger = logger;
     }
     
     public void Run()
     {
-        
-        Console.WriteLine("Лабораторная работа 2");
+        Console.WriteLine("");
+        Console.WriteLine("     Лабораторная работа 2       ");
         
         while (true)
         {
@@ -108,6 +81,8 @@ public class ConsoleApp
             Console.WriteLine("");
             Console.WriteLine("1. Информация о студенте");
             Console.WriteLine("2. Информация об университете");
+            Console.WriteLine("3. О работе");
+            Console.WriteLine("4. Портфолио разработчика");
             Console.WriteLine("0. Выход");
             
             Console.WriteLine("");
