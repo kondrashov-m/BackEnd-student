@@ -10,7 +10,9 @@ var builder = Host.CreateApplicationBuilder(args); // команда для со
 
 builder.Services.AddTransient<IStudentService, StudentService>();
 builder.Services.AddTransient<IUniversityService, UniversityService>();
+builder.Services.AddTransient<IBebraService, BebraService>();
 builder.Services.AddTransient<ConsoleApp>();
+
 
 var host = builder.Build();
 var app = host.Services.GetRequiredService<ConsoleApp>();
@@ -27,6 +29,10 @@ public interface IUniversityService
     void ShowUniversityInfo();
 }
 
+public interface IBebraService
+{
+    void Bababa();
+}
 
 // Реализации
 public class StudentService : IStudentService
@@ -54,20 +60,75 @@ public class UniversityService : IUniversityService
     }
 }
 
+public class BebraService : IBebraService
+{
+    public void Bababa()
+    {
+        Console.WriteLine("                                         ");
+        Console.WriteLine("                                         ");
+        Console.WriteLine("                                         ");
+        Console.WriteLine("                                         ");
+        Console.WriteLine("                                         ");
+        Console.WriteLine("                                         ");
+        Console.WriteLine("                                         ");
+        Console.WriteLine("                                         ");
+        Console.WriteLine("                                         ");
+        Console.WriteLine("                                         ");
+        Console.WriteLine("                                         ");
+        Console.WriteLine("                                         ");
+        Console.WriteLine("                                         ");
+        Console.WriteLine("                                         ");
+        Console.WriteLine("                                         ");
+        Console.WriteLine("                                         ");
+        Console.WriteLine("                                         ");
+        Console.WriteLine("                                         ");
+        Console.WriteLine("                                         ");
+        Console.WriteLine("                                         ");
+        Console.WriteLine("                                         ");
+        Console.WriteLine("                                         ");
+        Console.WriteLine("                                         ");
+        Console.WriteLine("                                         ");
+        Console.WriteLine("                                         ");
+        Console.WriteLine("                                         ");
+        Console.WriteLine("                                         ");
+        Console.WriteLine("                                         ");
+        Console.WriteLine("                                         ");
+        Console.WriteLine("                                         ");
+        Console.WriteLine("                                         ");
+        Console.WriteLine("                                         ");
+        Console.WriteLine("                                         ");
+        Console.WriteLine("                                         ");
+        Console.WriteLine("                                         ");
+        Console.WriteLine("                                         ");
+        Console.WriteLine("                                         ");
+        Console.WriteLine("                                         ");
+        Console.WriteLine("                                         ");
+        Console.WriteLine("                                         ");
+        Console.WriteLine("                                         ");
+        Console.WriteLine("                                         ");
+        Console.WriteLine("                                         ");
+        Console.WriteLine("                                         ");
+        Console.WriteLine("                                         ");
+
+    }
+}
 
 // Главное приложение
 public class ConsoleApp
 {
     private readonly IStudentService _studentService;
     private readonly IUniversityService _universityService;
+    private readonly IBebraService _bebraService;
 
     
     public ConsoleApp(
         IStudentService studentService,
-        IUniversityService universityService)
+        IUniversityService universityService,
+        IBebraService bebraService)
     {
         _studentService = studentService;
         _universityService = universityService;
+        _bebraService = bebraService;
     }
     
     public void Run()
@@ -85,6 +146,8 @@ public class ConsoleApp
             Console.WriteLine("4. Портфолио разработчика");
             Console.WriteLine("0. Выход");
             
+            _bebraService.Bababa();
+
             Console.WriteLine("");
             Console.Write("Выберите: ");
             var choice = Console.ReadLine();
@@ -93,6 +156,8 @@ public class ConsoleApp
                 _studentService.ShowStudentInfo();
             else if (choice == "2")
                 _universityService.ShowUniversityInfo();
+            else if (choice == "3")
+                _bebraService.Bababa();
             else if (choice == "0")
                 break;
         }
