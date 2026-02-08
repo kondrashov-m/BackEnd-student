@@ -10,7 +10,6 @@ var builder = Host.CreateApplicationBuilder(args); // команда для со
 
 builder.Services.AddTransient<IStudentService, StudentService>();
 builder.Services.AddTransient<IUniversityService, UniversityService>();
-builder.Services.AddTransient<IBebraService, BebraService>();
 builder.Services.AddTransient<ConsoleApp>();
 
 
@@ -29,10 +28,6 @@ public interface IUniversityService
     void ShowUniversityInfo();
 }
 
-public interface IBebraService
-{
-    void Bababa();
-}
 
 // Реализации
 public class StudentService : IStudentService
@@ -40,6 +35,7 @@ public class StudentService : IStudentService
        
     public void ShowStudentInfo()
     {
+        Console.Clear();
         Console.WriteLine("=== СТУДЕНТ ===");
         Console.WriteLine("");
         Console.WriteLine("ФИО: Кондрашов Михаил Иванович");
@@ -52,6 +48,7 @@ public class UniversityService : IUniversityService
 {
     public void ShowUniversityInfo()
     {
+        Console.Clear();
         Console.WriteLine("");
         Console.WriteLine("=== УНИВЕРСИТЕТ ===");
         Console.WriteLine("");
@@ -60,84 +57,30 @@ public class UniversityService : IUniversityService
     }
 }
 
-public class BebraService : IBebraService
-{
-    public void Bababa()
-    {
-        Console.WriteLine("                                         ");
-        Console.WriteLine("                                         ");
-        Console.WriteLine("                                         ");
-        Console.WriteLine("                                         ");
-        Console.WriteLine("                                         ");
-        Console.WriteLine("                                         ");
-        Console.WriteLine("                                         ");
-        Console.WriteLine("                                         ");
-        Console.WriteLine("                                         ");
-        Console.WriteLine("                                         ");
-        Console.WriteLine("                                         ");
-        Console.WriteLine("                                         ");
-        Console.WriteLine("                                         ");
-        Console.WriteLine("                                         ");
-        Console.WriteLine("                                         ");
-        Console.WriteLine("                                         ");
-        Console.WriteLine("                                         ");
-        Console.WriteLine("                                         ");
-        Console.WriteLine("                                         ");
-        Console.WriteLine("                                         ");
-        Console.WriteLine("                                         ");
-        Console.WriteLine("                                         ");
-        Console.WriteLine("                                         ");
-        Console.WriteLine("                                         ");
-        Console.WriteLine("                                         ");
-        Console.WriteLine("                                         ");
-        Console.WriteLine("                                         ");
-        Console.WriteLine("                                         ");
-        Console.WriteLine("                                         ");
-        Console.WriteLine("                                         ");
-        Console.WriteLine("                                         ");
-        Console.WriteLine("                                         ");
-        Console.WriteLine("                                         ");
-        Console.WriteLine("                                         ");
-        Console.WriteLine("                                         ");
-        Console.WriteLine("                                         ");
-        Console.WriteLine("                                         ");
-        Console.WriteLine("                                         ");
-        Console.WriteLine("                                         ");
-        Console.WriteLine("                                         ");
-        Console.WriteLine("                                         ");
-        Console.WriteLine("                                         ");
-        Console.WriteLine("                                         ");
-        Console.WriteLine("                                         ");
-        Console.WriteLine("                                         ");
-
-    }
-}
-
 // Главное приложение
 public class ConsoleApp
 {
     private readonly IStudentService _studentService;
     private readonly IUniversityService _universityService;
-    private readonly IBebraService _bebraService;
 
     
     public ConsoleApp(
         IStudentService studentService,
-        IUniversityService universityService,
-        IBebraService bebraService)
+        IUniversityService universityService)
     {
         _studentService = studentService;
         _universityService = universityService;
-        _bebraService = bebraService;
     }
     
     public void Run()
     {
+        Console.Clear();
         Console.WriteLine("");
         Console.WriteLine("     Лабораторная работа 2       ");
         
         while (true)
         {
+            
             Console.WriteLine("_____________________________");
             Console.WriteLine("");
             Console.WriteLine("1. Информация о студенте");
@@ -146,7 +89,7 @@ public class ConsoleApp
             Console.WriteLine("4. Портфолио разработчика");
             Console.WriteLine("0. Выход");
             
-            _bebraService.Bababa();
+            
 
             Console.WriteLine("");
             Console.Write("Выберите: ");
@@ -157,9 +100,11 @@ public class ConsoleApp
             else if (choice == "2")
                 _universityService.ShowUniversityInfo();
             else if (choice == "3")
-                _bebraService.Bababa();
+                Console.WriteLine("дввлдплвалвщалущалды");
             else if (choice == "0")
                 break;
+            else
+                Console.WriteLine("оаоааоаоаоащзфылавфыдлаца");
         }
         
     
