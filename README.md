@@ -1,44 +1,30 @@
-# BackEnd Student - библиотека готовых шаблонов проектирования для бэкенд-разработчиков на C#
+# Лабораторная работа №2
 [![.NET 8](https://img.shields.io/badge/.NET-8.0-512BD4)](https://dotnet.microsoft.com/)
 [![C# 10](https://img.shields.io/badge/C%23-10.0-239120)](https://docs.microsoft.com/dotnet/csharp/)
 [![ASP.NET Core](https://img.shields.io/badge/ASP.NET_Core-8.0-512BD4)](https://dotnet.microsoft.com/apps/aspnet)
 [![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 ```text
-Данное приложение создано в рамках проекта по дисциплине «BackEnd-разработка» 
-в 2026 году
+Тема: HTTP методы и передача данных на сервер
 ```
-<!-- 
+```text
+Цель работы: изучить способы передачи данных на сервер 
+в ASP.NET Core Web API.
+```
 ## 🚀 Инструкция по установке
 
 ```bash
 # Склонируйте репозиторий и перейдите в папку проекта
-git clone https://github.com/kondrashov-m/course_project_HR.git
-cd course_project_HR
+git clone https://github.com/kondrashov-m/BackEnd-student
+cd BackEnd-student
+git checkout lab1
 
 # Запустите приложение
 dotnet run
 ```
-## ✨ Возможности
-Сотрудники – добавление, редактирование, поиск, увольнение
+## ✨ О программе
+Веб-приложение, созданное в рамках лабораторной работы по дисциплине "BackEnd-разработка". 
+Демонстрирует использование класса `WebApplication` и Minimal API для создания многостраничного веб-приложения.
 
-Отпуска – оформление, утверждение, контроль пересечений
-
-Зарплата – расчет с учетом НДФЛ (13%), премий, отпусков
-
-Отчеты – штатное расписание, ФОТ, статистика
-
-База данных – JSON-файлы с автоматическим сохранением
-
-## 📁 Структура проекта
-``` text
-src/
-├── Core/          # Ядро приложения
-├── Models/        # Модели данных (Employee, Vacation, Salary)
-├── Repositories/  # Работа с данными (JSON хранилище)
-├── Services/      # Бизнес-логика
-├── UI/            # Консольный интерфейс
-└── Commands/      # Обработка пользовательских команд
-```
 ## 🛠 Технологии
 ``` text
 .NET 8 – кросс-платформенная среда выполнения
@@ -46,21 +32,10 @@ src/
 ```text
 C# 10 – современный ООП язык
 ```
-``` text
-System.Text.Json – сериализация данных
+```text 
+ASP.NET Core - с использованием Minimal API
 ```
-``` text
-SOLID принципы – чистая архитектура
-```
-``` text
-Repository/Service паттерны – разделение ответственности
-```
+
 # 
 <div align="center"><img width="148" height="34" alt="logo" src="https://github.com/user-attachments/assets/1ecfceb6-0999-4955-b38c-b66cd067c2c3" /></div>
-
- -->
-
- # 
-<div align="center"><img width="148" height="34" alt="logo" src="https://github.com/user-attachments/assets/1ecfceb6-0999-4955-b38c-b66cd067c2c3" /></div>
-
 
