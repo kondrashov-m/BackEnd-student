@@ -7,17 +7,15 @@ using System.Text.Json;
 var builder = WebApplication.CreateBuilder(args);
 var app = builder.Build();
 
-
-// Временное хранилище данных 
-
-static List<Student> students = new List<Student>
+// Временное хранилище данных (УБИРАЕМ static)
+List<Student> students = new List<Student>
 {
     new Student { Id = 1, Name = "Михаил Кондрашов", Age = 19, Group = "241-331" },
     new Student { Id = 2, Name = "Петр Новиков", Age = 21, Group = "241-331" },
     new Student { Id = 3, Name = "Вова Путин", Age = 73 , Group = "241-777" }
 };
 
-static List<University> universities = new List<University>
+List<University> universities = new List<University>
 {
     new University { Id = 1, Name = "Московский Политех", Faculty = "Факультет Информационных технологий" },
     new University { Id = 2, Name = "СПбГУ", Faculty = "Засекреченный факультет" }
@@ -312,7 +310,7 @@ app.MapPost("/api/students", (Student newStudent) =>
     });
 });
 
-// 3. POST с query и телом запароса 
+// 3. POST с query и телом запроса 
 app.MapPost("/api/universities/{universityId}/students", (int universityId, Student newStudent) =>
 {
     var university = universities.FirstOrDefault(u => u.Id == universityId);
@@ -403,3 +401,19 @@ app.MapGet("/api/universities", () =>
 
 app.Run();
 
+// Классы моделей
+
+public class Student
+{
+    public int Id { get; set; }
+    public string Name { get; set; } = "";
+    public int Age { get; set; }
+    public string Group { get; set; } = "241-331";
+}
+
+public class University
+{
+    public int Id { get; set; }
+    public string Name { get; set; } = "";
+    public string Faculty { get; set; } = "";
+}
