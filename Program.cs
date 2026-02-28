@@ -7,7 +7,7 @@ using System.Text.Json;
 var builder = WebApplication.CreateBuilder(args);
 var app = builder.Build();
 
-// Временное хранилище данных (УБИРАЕМ static)
+// Временное хранилище данных
 List<Student> students = new List<Student>
 {
     new Student { Id = 1, Name = "Михаил Кондрашов", Age = 19, Group = "241-331" },
