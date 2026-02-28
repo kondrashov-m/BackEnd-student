@@ -4,11 +4,11 @@
 [![ASP.NET Core](https://img.shields.io/badge/ASP.NET_Core-8.0-512BD4)](https://dotnet.microsoft.com/apps/aspnet)
 [![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 ```text
-Тема: Создание приложения на основе класса WebApplication в ASP.NET Core
+Тема: Изучение выдачи ответов в веб-приложении на основе ASP.NET Core
 ```
 ```text
-Цель работы: Ознакомиться с базовыми шагами создания веб-приложения на основе класса
-WebApplication в ASP.NET Core
+Ознакомиться с различными способами формирования ответов в веб-приложениях 
+на платформе ASP.NET Core.
 ```
 ## 🚀 Инструкция по установке
 
@@ -16,14 +16,14 @@ WebApplication в ASP.NET Core
 # Склонируйте репозиторий и перейдите в папку проекта
 git clone https://github.com/kondrashov-m/BackEnd-student
 cd BackEnd-student
-git checkout lab1
+git checkout lab3
 
 # Запустите приложение
 dotnet run
 ```
 ## ✨ О программе
 Веб-приложение, созданное в рамках лабораторной работы по дисциплине "BackEnd-разработка". 
-Демонстрирует использование класса `WebApplication` и Minimal API для создания многостраничного веб-приложения.
+Демонстрирует различные способы формирования ответов в веб-приложениях.
 
 ## 🛠 Технологии
 ``` text
