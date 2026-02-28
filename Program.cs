@@ -1,191 +1,200 @@
-// Лабораторная работа №3
-// Кондрашов Михаил, 241-331
-
 using System.Text;
+using System.Text.Json;
 
 var builder = WebApplication.CreateBuilder(args);
 var app = builder.Build();
 
-// Функция для создания HTML страниц
-string CreateHtmlPage(string title, string content)
+// Данные для работы
+List<Student> students = new List<Student>
 {
-    var html = new StringBuilder();
-    
-    html.AppendLine("<!DOCTYPE html>");
-    html.AppendLine("<html lang='ru'>");
-    html.AppendLine("<head>");
-    html.AppendLine("    <meta charset='UTF-8'>");
-    html.AppendLine($"    <title>{title}</title>");
-    html.AppendLine("    <style>");
-    html.AppendLine("        body {");
-    html.AppendLine("            font-family: Arial, sans-serif;");
-    html.AppendLine("            margin: 0;");
-    html.AppendLine("            padding: 20px;");
-    html.AppendLine("            background: linear-gradient(135deg, #990909 0%, #887b94 100%);");
-    html.AppendLine("            min-height: 100vh;");
-    html.AppendLine("        }");
-    html.AppendLine("        .container {");
-    html.AppendLine("            max-width: 1000px;");
-    html.AppendLine("            margin: 0 auto;");
-    html.AppendLine("            background: white;");
-    html.AppendLine("            border-radius: 15px;");
-    html.AppendLine("            padding: 30px;");
-    html.AppendLine("            box-shadow: 0 10px 30px rgba(0,0,0,0.2);");
-    html.AppendLine("        }");
-    html.AppendLine("        h1 {");
-    html.AppendLine("            color: #333;");
-    html.AppendLine("            text-align: center;");
-    html.AppendLine("            margin-bottom: 30px;");
-    html.AppendLine("        }");
-    html.AppendLine("        nav {");
-    html.AppendLine("            background: #2c3e50;");
-    html.AppendLine("            padding: 15px;");
-    html.AppendLine("            border-radius: 8px;");
-    html.AppendLine("            margin: 20px 0;");
-    html.AppendLine("            text-align: center;");
-    html.AppendLine("        }");
-    html.AppendLine("        nav a {");
-    html.AppendLine("            color: white;");
-    html.AppendLine("            text-decoration: none;");
-    html.AppendLine("            margin: 0 15px;");
-    html.AppendLine("            padding: 8px 16px;");
-    html.AppendLine("            border-radius: 5px;");
-    html.AppendLine("            transition: background 0.3s;");
-    html.AppendLine("        }");
-    html.AppendLine("        nav a:hover {");
-    html.AppendLine("            background: #34495e;");
-    html.AppendLine("        }");
-    html.AppendLine("        .card {");
-    html.AppendLine("            background: #f8f9fa;");
-    html.AppendLine("            padding: 20px;");
-    html.AppendLine("            margin: 15px 0;");
-    html.AppendLine("            border-radius: 8px;");
-    html.AppendLine("            border-left: 4px solid #3498db;");
-    html.AppendLine("        }");
-    html.AppendLine("        footer {");
-    html.AppendLine("            margin-top: 30px;");
-    html.AppendLine("            text-align: center;");
-    html.AppendLine("            color: #7f8c8d;");
-    html.AppendLine("            font-size: 0.9rem;");
-    html.AppendLine("        }");
-    html.AppendLine("    </style>");
-    html.AppendLine("</head>");
-    html.AppendLine("<body>");
-    html.AppendLine("    <div class='container'>");
-    html.AppendLine($"        <h1>{title}</h1>");
-    html.AppendLine("        <nav>");
-    html.AppendLine("            <a href='/'>🏠 Главная</a>");
-    html.AppendLine("            <a href='/about'>📝 О проекте</a>");
-    html.AppendLine("            <a href='/aspnet'>🔄 ASP.NET</a>");
-    html.AppendLine("            <a href='/university'>🏛 Университет</a>");
-    html.AppendLine("            <a href='/lab'>📊 О работе</a>");
-    html.AppendLine("        </nav>");
-    html.AppendLine($"        {content}");
-    html.AppendLine("        <footer>");
-    html.AppendLine("            <p>Разработал: <strong>Михаил Кондрашов</strong> | Группа: 241-331</p>");
-    html.AppendLine("            <p>Портфолио: <a href='https://kondrashov-m.ru' target='_blank'>kondrashov-m.ru</a></p>");
-    html.AppendLine("            <p>Московский Политехнический Университет • 2026</p>");
-    html.AppendLine("        </footer>");
-    html.AppendLine("    </div>");
-    html.AppendLine("</body>");
-    html.AppendLine("</html>");
-    
-    return html.ToString();
-}
+    new Student { Id = 1, Name = "Кондрашов Михаил", Age = 19, Group = "241-331" },
+    new Student { Id = 2, Name = "Иванов Петр", Age = 20, Group = "241-331" },
+    new Student { Id = 3, Name = "Сидоров Алексей", Age = 21, Group = "241-332" }
+};
 
-// Главная страница
-app.MapGet("/", () => 
+// 1. HTML-контент (text/html)
+app.MapGet("/html", () =>
 {
-    string content = @"
-        <div class='card'>
-            <h2>👨‍🎓 Информация о студенте</h2>
-            <p><strong>ФИО:</strong> Кондрашов Михаил Иванович</p>
-            <p><strong>Группа:</strong> 241-331</p>
-            <p><strong>Направление:</strong> 09.03.02 «Информационные системы и технологии»</p>
-            <p><strong>Дата выполнения:</strong> 03.02.2026</p>
-        </div>
-        
-        <div class='card'>
-            <h2>🎯 Цель работы</h2>
-            <p>Освоить создание веб-приложений с использованием класса <strong>WebApplication</strong> в ASP.NET Core.</p>
-        </div>
-        
-        <div class='card'>
-            <h2>💻 Технологии</h2>
-            <ul>
-                <li>ASP.NET Core 8.0</li>
-                <li>C# 12.0</li>
-                <li>Minimal API</li>
-                <li>WebApplication класс</li>
-                <li>HTML5 + CSS3</li>
-            </ul>
-        </div>
-    ";
+    string html = @"<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='UTF-8'>
+    <title>HTML ответ</title>
+    <style>
+        body { font-family: Arial; background: #f0f0f0; padding: 20px; }
+        .card { background: white; padding: 20px; border-radius: 10px; max-width: 600px; margin: 0 auto; }
+        h1 { color: #333; }
+    </style>
+</head>
+<body>
+    <div class='card'>
+        <h1>Лабораторная работа №3</h1>
+        <p><b>Тип ответа:</b> text/html</p>
+        <p><b>Студент:</b> Кондрашов Михаил</p>
+        <p><b>Группа:</b> 241-331</p>
+        <p><b>Время:</b> " + DateTime.Now.ToString("HH:mm:ss dd.MM.yyyy") + @"</p>
+    </div>
+</body>
+</html>";
     
-    return Results.Text(CreateHtmlPage("Лабораторная работа №1", content), "text/html", System.Text.Encoding.UTF8);
+    return Results.Text(html, "text/html", Encoding.UTF8);
 });
 
-// О проекте
-app.MapGet("/about", () => 
+// 2. Текстовый ответ (text/plain)
+app.MapGet("/text", () =>
 {
-    string content = @"
-        <div class='card'>
-            <h2>О проекте</h2>
-            <p>Данное веб-приложение создано в рамках лабораторной работы №1 по дисциплине ""BackEnd-разработка"".</p>
-            <p>Проект демонстрирует использование класса WebApplication в ASP.NET Core для создания минимального веб-приложения.</p>
-        </div>
-    ";
+    string text = "=== ЛАБОРАТОРНАЯ РАБОТА №3 ===\n";
+    text += "Тип ответа: text/plain\n";
+    text += $"Студент: Кондрашов Михаил\n";
+    text += $"Группа: 241-331\n";
+    text += $"Время: {DateTime.Now}\n";
+    text += $"Всего студентов: {students.Count}\n";
     
-    return Results.Text(CreateHtmlPage("О проекте", content), "text/html", System.Text.Encoding.UTF8);
+    return Results.Text(text, "text/plain", Encoding.UTF8);
 });
 
-// ASP.NET Core
-app.MapGet("/aspnet", () => 
+// 3. JSON-данные (application/json)
+app.MapGet("/json", () =>
 {
-    string content = @"
-        <div class='card'>
-            <h2>ASP.NET Core</h2>
-            <p>Кросс-платформенный фреймворк для создания веб-приложений на C#.</p>
-            <p>В данной работе используется Minimal API - упрощенный подход к созданию веб-приложений.</p>
-        </div>
-    ";
-    
-    return Results.Text(CreateHtmlPage("ASP.NET Core", content), "text/html", System.Text.Encoding.UTF8);
+    var data = new
+    {
+        lab = 3,
+        student = new { name = "Кондрашов Михаил", group = "241-331" },
+        students = students.Select(s => new { s.Id, s.Name, s.Age, s.Group }),
+        time = DateTime.Now
+    };
+    return Results.Json(data);
 });
 
-// Университет
-app.MapGet("/university", () => 
+// 4. XML-ответ (application/xml)
+app.MapGet("/xml", () =>
 {
-    string content = @"
-        <div class='card'>
-            <h2>Московский Политехнический Университет</h2>
-            <p><strong>Факультет:</strong> Информационных технологий</p>
-            <p><strong>Кафедра: ИиИТ</strong> </p>
-            <p><strong>Направление:</strong> 09.03.02 «Информационные системы и технологии»</p>
-        </div>
-    ";
+    string xml = "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n";
+    xml += "<response>\n";
+    xml += "  <lab>3</lab>\n";
+    xml += "  <student>\n";
+    xml += "    <name>Кондрашов Михаил</name>\n";
+    xml += "    <group>241-331</group>\n";
+    xml += "  </student>\n";
+    xml += "  <students>\n";
     
-    return Results.Text(CreateHtmlPage("Университет", content), "text/html", System.Text.Encoding.UTF8);
+    foreach (var s in students)
+        xml += $"    <student><id>{s.Id}</id><name>{s.Name}</name><age>{s.Age}</age><group>{s.Group}</group></student>\n";
+    
+    xml += "  </students>\n";
+    xml += $"  <time>{DateTime.Now}</time>\n";
+    xml += "</response>";
+    
+    return Results.Text(xml, "application/xml", Encoding.UTF8);
 });
 
-// Лабораторная работа
-app.MapGet("/lab", () => 
+// 5. CSV-данные (text/csv)
+// 5. CSV-данные (text/csv) - ИСПРАВЛЕНО
+app.MapGet("/csv", () =>
 {
-    string content = @"
-        <div class='card'>
-            <h2>Лабораторная работа №1</h2>
-            <p><strong>Дисциплина:</strong> BackEnd-разработка</p>
-            <p><strong>Тема:</strong> Создание приложения на основе класса WebApplication</p>
-            <p><strong>Требования:</strong></p>
-            <ul>
-                <li>✅ Создание проекта на базе WebApplication</li>
-                <li>✅ Несколько минимальных страниц</li>
-                <li>✅ Использование ASP.NET Core</li>
-            </ul>
-        </div>
-    ";
+    var csv = new StringBuilder();
     
-    return Results.Text(CreateHtmlPage("О работе", content), "text/html", System.Text.Encoding.UTF8);
+    // Добавляем BOM для UTF-8
+    byte[] bom = new byte[] { 0xEF, 0xBB, 0xBF };
+    
+    csv.AppendLine("Id,Name,Age,Group");
+    foreach (var s in students)
+        csv.AppendLine($"{s.Id},{s.Name},{s.Age},{s.Group}");
+    
+    // Конвертируем в байты с BOM
+    byte[] csvBytes = bom.Concat(Encoding.UTF8.GetBytes(csv.ToString())).ToArray();
+    
+    return Results.Bytes(csvBytes, "text/csv", "students.csv");
+});
+
+// 6. Бинарные данные (application/octet-stream)
+app.MapGet("/binary", () =>
+{
+    string data = $"Бинарные данные\nСтудент: Кондрашов Михаил\nВремя: {DateTime.Now}";
+    byte[] bytes = Encoding.UTF8.GetBytes(data);
+    return Results.Bytes(bytes, "application/octet-stream", "data.bin");
+});
+
+// 7. Изображение (image/svg+xml)
+app.MapGet("/image", () =>
+{
+    string svg = $@"<svg width='400' height='200' xmlns='http://www.w3.org/2000/svg'>
+        <rect width='400' height='200' fill='#4CAF50'/>
+        <text x='20' y='50' fill='white' font-size='20'>Кондрашов Михаил</text>
+        <text x='20' y='100' fill='white' font-size='20'>241-331</text>
+        <text x='20' y='150' fill='white' font-size='15'>{DateTime.Now:HH:mm:ss}</text>
+    </svg>";
+    
+    byte[] img = Encoding.UTF8.GetBytes(svg);
+    return Results.Bytes(img, "image/svg+xml", "image.svg");
+});
+
+// 8. PDF-файл (application/pdf)
+app.MapGet("/pdf", () =>
+{
+    string html = $@"<!DOCTYPE html>
+<html>
+<head><meta charset='UTF-8'></head>
+<body>
+    <h1>Отчет по лабораторной работе №3</h1>
+    <p>Студент: Кондрашов Михаил</p>
+    <p>Группа: 241-331</p>
+    <p>Дата: {DateTime.Now}</p>
+    <table border='1'>
+        <tr><th>ID</th><th>Имя</th><th>Возраст</th><th>Группа</th></tr>";
+    
+    foreach (var s in students)
+        html += $"<tr><td>{s.Id}</td><td>{s.Name}</td><td>{s.Age}</td><td>{s.Group}</td></tr>";
+    
+    html += "</table></body></html>";
+    
+    byte[] pdf = Encoding.UTF8.GetBytes(html);
+    return Results.Bytes(pdf, "application/pdf", "report.pdf");
+});
+
+// 9. Редирект 302 (временный)
+app.MapGet("/redirect", () => Results.Redirect("/html", false));
+
+// 10. Редирект 301 (постоянный)
+app.MapGet("/redirect-permanent", () => Results.Redirect("/text", true));
+
+// Главная страница со всеми ссылками
+app.MapGet("/", () =>
+{
+    string html = @"<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='UTF-8'>
+    <title>Лабораторная работа №3</title>
+</head>
+<body style='font-family: Arial; padding: 20px;'>
+    <h1>Лабораторная работа №3</h1>
+    <h2>Студент: Кондрашов Михаил, группа 241-331</h2>
+    <ul>
+        <li><a href='/html'>1. HTML ответ (text/html)</a></li>
+        <li><a href='/text'>2. Текстовый ответ (text/plain)</a></li>
+        <li><a href='/json'>3. JSON данные (application/json)</a></li>
+        <li><a href='/xml'>4. XML ответ (application/xml)</a></li>
+        <li><a href='/csv'>5. CSV данные (text/csv)</a></li>
+        <li><a href='/binary'>6. Бинарные данные (application/octet-stream)</a></li>
+        <li><a href='/image'>7. Изображение (image/svg+xml)</a></li>
+        <li><a href='/pdf'>8. PDF файл (application/pdf)</a></li>
+        <li><a href='/redirect'>9. Редирект 302 → /html</a></li>
+        <li><a href='/redirect-permanent'>10. Редирект 301 → /text</a></li>
+    </ul>
+</body>
+</html>";
+    
+    return Results.Text(html, "text/html", Encoding.UTF8);
 });
 
 app.Run();
+
+// Класс Student
+public class Student
+{
+    public int Id { get; set; }
+    public string Name { get; set; } = "";
+    public int Age { get; set; }
+    public string Group { get; set; } = "";
+}
