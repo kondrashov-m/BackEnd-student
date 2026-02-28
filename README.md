@@ -1,4 +1,4 @@
-# Лабораторная работа №1
+# Лабораторная работа №3
 [![.NET 8](https://img.shields.io/badge/.NET-8.0-512BD4)](https://dotnet.microsoft.com/)
 [![C# 10](https://img.shields.io/badge/C%23-10.0-239120)](https://docs.microsoft.com/dotnet/csharp/)
 [![ASP.NET Core](https://img.shields.io/badge/ASP.NET_Core-8.0-512BD4)](https://dotnet.microsoft.com/apps/aspnet)
