@@ -15,6 +15,7 @@
 ## 🗺️ Навигация
 #### [Лабораторная работа №1. Создание приложения на основе класса WebApplication на основе ASP.NET Core](https://github.com/kondrashov-m/BackEnd-student/tree/lab1)
 #### [Лабораторная работа №2. HTTP методы и передача данных на сервер](https://github.com/kondrashov-m/BackEnd-student/tree/lab2)
+#### [Лабораторная работа №3. Изучение выдачи ответов в веб-приложении на основе ASP.NET Core](https://github.com/kondrashov-m/BackEnd-student/tree/lab3)
 
 
 <!-- 
