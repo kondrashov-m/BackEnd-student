@@ -1,4 +1,4 @@
-# Лабораторная работа №1
+# Лабораторная работа №4
 [![.NET 8](https://img.shields.io/badge/.NET-8.0-512BD4)](https://dotnet.microsoft.com/)
 [![C# 10](https://img.shields.io/badge/C%23-10.0-239120)](https://docs.microsoft.com/dotnet/csharp/)
 [![ASP.NET Core](https://img.shields.io/badge/ASP.NET_Core-8.0-512BD4)](https://dotnet.microsoft.com/apps/aspnet)
@@ -7,8 +7,8 @@
 Тема: Создание приложения на основе класса WebApplication в ASP.NET Core
 ```
 ```text
-Цель работы: Ознакомиться с базовыми шагами создания веб-приложения на основе класса
-WebApplication в ASP.NET Core
+Цель работы: освоить создание веб-API приложения на платформе ASP.NET Core 
+для обработки HTTP-запросов и предоставления данных через API.
 ```
 ## 🚀 Инструкция по установке
 
@@ -16,14 +16,14 @@ WebApplication в ASP.NET Core
 # Склонируйте репозиторий и перейдите в папку проекта
 git clone https://github.com/kondrashov-m/BackEnd-student
 cd BackEnd-student
-git checkout lab1
+git checkout lab4
 
 # Запустите приложение
 dotnet run
 ```
 ## ✨ О программе
-Веб-приложение, созданное в рамках лабораторной работы по дисциплине "BackEnd-разработка". 
-Демонстрирует использование класса `WebApplication` и Minimal API для создания многостраничного веб-приложения.
+Веб-API, созданное в рамках лабораторной работы по дисциплине "BackEnd-разработка".
+Демонстрирует использование контроллеров, DTO, валидации и Swagger для создания полноценного REST AP
 
 ## 🛠 Технологии
 ``` text
