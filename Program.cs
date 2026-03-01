@@ -1,3 +1,6 @@
+// Лабораторная работа №3
+// Кондрашов Михаил, 241-331
+
 using System.Text;
 using System.Text.Json;
 
@@ -11,7 +14,6 @@ QuestPDF.Settings.License = LicenseType.Community;
 var builder = WebApplication.CreateBuilder(args);
 var app = builder.Build();
 
-// 1. HTML ответ
 app.MapGet("/html", () =>
 {
     string html = @"<!DOCTYPE html>
@@ -39,7 +41,7 @@ app.MapGet("/html", () =>
     return Results.Text(html, "text/html", Encoding.UTF8);
 });
 
-// 2. Текстовый ответ
+
 app.MapGet("/plain", () =>
 {
     string text = "Лабораторная работа №3\n";
@@ -51,14 +53,14 @@ app.MapGet("/plain", () =>
     return Results.Text(text, "text/plain", Encoding.UTF8);
 });
 
-// 3. JSON (без класса Student)
+
 app.MapGet("/json", () =>
 {
     var data = new[]
     {
         new { id = 1, name = "Михаил Кондрашов", age = 19, group = "241-331" },
         new { id = 2, name = "Петр Новиков", age = 21, group = "241-331" },
-        new { id = 3, name = "Вова Путин", age = 73, group = "241-777" }
+        new { id = 3, name = "Владимир Путин", age = 73, group = "241-777" }
     };
     
     var options = new JsonSerializerOptions 
@@ -70,7 +72,7 @@ app.MapGet("/json", () =>
     return Results.Json(data, options);
 });
 
-// 4. XML (без хранилища)
+
 app.MapGet("/xml", () =>
 {
     string xml = @"<?xml version=""1.0"" encoding=""utf-8""?>
@@ -91,7 +93,6 @@ app.MapGet("/xml", () =>
     return Results.Text(xml, "application/xml", Encoding.UTF8);
 });
 
-// 5. CSV (без хранилища)
 app.MapGet("/csv", () =>
 {
     var csv = new StringBuilder();
@@ -106,7 +107,6 @@ app.MapGet("/csv", () =>
     return Results.Bytes(csvBytes, "text/csv", "students.csv");
 });
 
-// 6. Бинарные данные
 app.MapGet("/binary", () =>
 {
     string data = $"Бинарные данные\nСтудент: Кондрашов Михаил\nВремя: {DateTime.Now}";
@@ -114,7 +114,6 @@ app.MapGet("/binary", () =>
     return Results.Bytes(bytes, "application/octet-stream", "data.bin");
 });
 
-// 7. Изображение (image/png) - ТЕПЕРЬ С ТВОИМ ФАЙЛОМ
 app.MapGet("/image", () =>
 {
     string imagePath = Path.Combine(Directory.GetCurrentDirectory(), "1.png");
@@ -132,7 +131,6 @@ app.MapGet("/pdf", () =>
 {
     var stream = new MemoryStream();
     
-    // Создаем PDF документ
     var document = Document.Create(container =>
     {
         container.Page(page =>
@@ -204,13 +202,10 @@ app.MapGet("/pdf", () =>
     return Results.Bytes(stream.ToArray(), "application/pdf", "laboratornaya_3.pdf");
 });
 
-// 9. Редирект 302
 app.MapGet("/redirect", () => Results.Redirect("/html", false));
 
-// 10. Редирект 301
 app.MapGet("/redirect-permanent", () => Results.Redirect("/plain", true));
 
-// Главная страница
 app.MapGet("/", () =>
 {
     string html = @"<!DOCTYPE html>
@@ -223,14 +218,14 @@ app.MapGet("/", () =>
     <h1>Лабораторная работа №3</h1>
     <h2>Студент: Кондрашов Михаил, группа 241-331</h2>
     <ul>
-        <li><a href='/html'>1. HTML ответ (text/html)</a></li>
+        <li><a href='/html'>1. HTML-контент (text/html)</a></li>
         <li><a href='/plain'>2. Текстовый ответ (text/plain)</a></li>
         <li><a href='/json'>3. JSON данные (application/json)</a></li>
-        <li><a href='/xml'>4. XML ответ (application/xml)</a></li>
-        <li><a href='/csv'>5. CSV данные (text/csv)</a></li>
+        <li><a href='/xml'>4. XML-ответ (application/xml)</a></li>
+        <li><a href='/csv'>5. CSV-данные (text/csv)</a></li>
         <li><a href='/binary'>6. Бинарные данные (application/octet-stream)</a></li>
-        <li><a href='/image'>7. Изображение (image/svg+xml)</a></li>
-        <li><a href='/pdf'>8. PDF файл (application/pdf) - ИСПРАВЛЕН!</a></li>
+        <li><a href='/image'>7. Изображение (image/png)</a></li>
+        <li><a href='/pdf'>8. PDF-файл (application/pdf)</a></li>
         <li><a href='/redirect'>9. Редирект 302 → /html</a></li>
         <li><a href='/redirect-permanent'>10. Редирект 301 → /plain</a></li>
     </ul>
