@@ -85,7 +85,7 @@ app.MapGet("/xml", () =>
     <students>
         <student><id>1</id><name>Михаил Кондрашов</name><age>19</age><group>241-331</group></student>
         <student><id>2</id><name>Петр Новиков</name><age>21</age><group>241-331</group></student>
-        <student><id>3</id><name>Вова Путин</name><age>73</age><group>241-777</group></student>
+        <student><id>3</id><name>Владимир Путин</name><age>73</age><group>241-777</group></student>
     </students>
     <time>" + DateTime.Now + @"</time>
 </response>";
@@ -99,7 +99,7 @@ app.MapGet("/csv", () =>
     csv.AppendLine("Id,Name,Age,Group");
     csv.AppendLine("1,Михаил Кондрашов,19,241-331");
     csv.AppendLine("2,Петр Новиков,21,241-331");
-    csv.AppendLine("3,Вова Путин,73,241-777");
+    csv.AppendLine("3,Владимир Путин,73,241-777");
     
     byte[] bom = new byte[] { 0xEF, 0xBB, 0xBF };
     byte[] csvBytes = bom.Concat(Encoding.UTF8.GetBytes(csv.ToString())).ToArray();
