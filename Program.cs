@@ -182,7 +182,7 @@ app.MapGet("/pdf", () =>
                         table.Cell().Text("241-331");
                         
                         table.Cell().Text("3");
-                        table.Cell().Text("Вова Путин");
+                        table.Cell().Text("Владимир Путин");
                         table.Cell().Text("73");
                         table.Cell().Text("241-777");
                     });
