@@ -1,6 +1,9 @@
 using System.ComponentModel.DataAnnotations;
 
-public class UpdateStudentDto
+namespace BackEnd_student.Models.DTOs;
+
+
+public class CreateStudentDto
 {
     [Required(ErrorMessage = "Ошибка! Введите ФИО")]
     public string FullName { get; set; } = "";
