@@ -1,3 +1,6 @@
+// Лабораторная работа №4
+// Кондрашов Михаил, 241-331
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
