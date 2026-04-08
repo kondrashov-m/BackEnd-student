@@ -18,7 +18,7 @@
 #### [Лабораторная работа №3. Изучение выдачи ответов в веб-приложении на основе ASP.NET Core](https://github.com/kondrashov-m/BackEnd-student/tree/lab3)
 #### [Лабораторная работа №4. Создание веб-API приложения на основе ASP.NET Core](https://github.com/kondrashov-m/BackEnd-student/tree/lab4)
 #### [Лабораторная работа №5. Добавление маршрутизации в веб-приложение на основе ASP.NET Core](https://github.com/kondrashov-m/BackEnd-student/tree/lab5)
-#### [Лабораторная работа №6. Создание приложения с внедренными зависимостями на основе ASP.NET Core](https://github.com/kondrashov-m/BackEnd-student/tree/lab5)
+#### [Лабораторная работа №6. Создание приложения с внедренными зависимостями на основе ASP.NET Core](https://github.com/kondrashov-m/BackEnd-student/tree/lab6)
 
 
 <!-- 
