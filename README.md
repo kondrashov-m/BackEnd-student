@@ -4,7 +4,7 @@
 [![ASP.NET Core](https://img.shields.io/badge/ASP.NET_Core-8.0-512BD4)](https://dotnet.microsoft.com/apps/aspnet)
 [![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 ```text
-Тема: Изучение выдачи ответов в веб-приложении на основе ASP.NET Core
+Тема: Добавление маршрутизации в веб-приложение на основе ASP.NET Core
 ```
 ```text
 Познакомиться с основами настройки и использования маршрутизации 
