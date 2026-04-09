@@ -1,0 +1,18 @@
+﻿## .NET
+bin/
+obj/
+*.user
+*.suo
+*.db
+*.log
+*.tmp
+*.swp
+.vs/
+.idea/
+*.DotSettings
+launchSettings.json
+appsettings.Development.json
+
+## OS
+Thumbs.db
+.DS_Store
