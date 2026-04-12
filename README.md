@@ -1,14 +1,15 @@
-# Лабораторная работа №6
+# Лабораторная работа №7
 [![.NET 9](https://img.shields.io/badge/.NET-9.0-512BD4)](https://dotnet.microsoft.com/)
 [![C# 13](https://img.shields.io/badge/C%23-13.0-239120)](https://docs.microsoft.com/dotnet/csharp/)
 [![ASP.NET Core](https://img.shields.io/badge/ASP.NET_Core-9.0-512BD4)](https://dotnet.microsoft.com/apps/aspnet)
 [![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 ```text
-Тема: Создание приложения с внедренными зависимостями на основе ASP.NET Core
+Тема: Работа с middleware в ASP.NET Core
 ```
 ```text
-Освоить создание приложения, использующего внедрение зависимостей 
-в ASP.NET Core с архитектурой Controller → Service → Repository.
+Освоить создание и подключение пользовательских middleware в ASP.NET Core, 
+понять принцип работы конвейера обработки HTTP-запросов, научиться использовать 
+HttpContext для передачи данных между middleware и формирования ответов.
 ```
 ## 🚀 Инструкция по установке
 
@@ -23,9 +24,12 @@ dotnet run
 ```
 ## ✨ О программе
 Веб-API приложение, созданное в рамках лабораторной работы по дисциплине "BackEnd-разработка".
-Демонстрирует внедрение зависимостей (Dependency Injection) с архитектурой Controller → Service → Repository.
-Данные хранятся в памяти, реализованы операции GET и POST для модели Product, подключен Swagger для тестирования.
 
+Демонстрирует создание и подключение пользовательских middleware:
+1. BlockPathMiddleware — блокирует запросы к путям, начинающимся с /blocked (возвращает 403 Forbidden)
+2. RequestTraceMiddleware — генерирует уникальный TraceId (Guid), добавляет заголовок X-Trace-Id и сохраняет его в HttpContext.Items
+3. EndpointTimingMiddleware — измеряет время выполнения эндпоинта с помощью Stopwatch и добавляет заголовок X-Endpoint-Elapsed-Ms
+   
 ## 🛠 Технологии
 ```text
 .NET 9 – кросс-платформенная среда выполнения
