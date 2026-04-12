@@ -6,6 +6,7 @@ namespace DependencyInjectionDemo.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
+[Produces("application/json")]
 public class ProductsController : ControllerBase
 {
     private readonly IProductService _productService;
