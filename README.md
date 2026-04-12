@@ -34,7 +34,10 @@ dotnet run
 C# 13 – современный ООП язык
 ```
 ```text 
-ASP.NET Core - с использованием Minimal API
+ASP.NET Core - с использованием контроллеров и Swagger
+```
+```text
+Dependency Injection - встроенный DI-контейнер (Singleton/Scoped)
 ```
 
 # 
