@@ -17,7 +17,7 @@ HttpContext для передачи данных между middleware и фор
 # Склонируйте репозиторий и перейдите в папку проекта
 git clone https://github.com/kondrashov-m/BackEnd-student
 cd BackEnd-student
-git checkout lab6
+git checkout lab7
 
 # Запустите приложение
 dotnet run
