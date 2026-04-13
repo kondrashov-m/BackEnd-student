@@ -4,11 +4,11 @@
 [![ASP.NET Core](https://img.shields.io/badge/ASP.NET_Core-9.0-512BD4)](https://dotnet.microsoft.com/apps/aspnet)
 [![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 ```text
-Тема: Конфигурация веб-приложение на основе ASP.NET Core
+Тема: Логирование веб-приложение на основе ASP.NET Core
 
 ```
 ```text
-Освоить процесс конфигурирования веб-приложений на платформе ASP.NET Core для эффективного управления параметрами приложения.
+Цель работы: Ознакомиться с методами логирования и их применением в веб-приложениях на платформе ASP.NET Core.
 ```
 ## 🚀 Инструкция по установке
 
