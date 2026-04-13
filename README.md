@@ -1,15 +1,13 @@
-# Лабораторная работа №7
+# Лабораторная работа №9
 [![.NET 9](https://img.shields.io/badge/.NET-9.0-512BD4)](https://dotnet.microsoft.com/)
 [![C# 13](https://img.shields.io/badge/C%23-13.0-239120)](https://docs.microsoft.com/dotnet/csharp/)
 [![ASP.NET Core](https://img.shields.io/badge/ASP.NET_Core-9.0-512BD4)](https://dotnet.microsoft.com/apps/aspnet)
 [![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 ```text
-Тема: Работа с middleware в ASP.NET Core
+Тема: Конфигурация веб-приложение на основе ASP.NET Core
 ```
 ```text
-Освоить создание и подключение пользовательских middleware в ASP.NET Core, 
-понять принцип работы конвейера обработки HTTP-запросов, научиться использовать 
-HttpContext для передачи данных между middleware и формирования ответов.
+Освоить процесс конфигурирования веб-приложений на платформе ASP.NET Core для эффективного управления параметрами приложения.
 ```
 ## 🚀 Инструкция по установке
 
@@ -17,7 +15,7 @@ HttpContext для передачи данных между middleware и фор
 # Склонируйте репозиторий и перейдите в папку проекта
 git clone https://github.com/kondrashov-m/BackEnd-student
 cd BackEnd-student
-git checkout lab7
+git checkout lab9
 
 # Запустите приложение
 dotnet run
@@ -38,10 +36,7 @@ dotnet run
 C# 13 – современный ООП язык
 ```
 ```text 
-ASP.NET Core - с использованием контроллеров и Swagger
-```
-```text
-Dependency Injection - встроенный DI-контейнер (Singleton/Scoped)
+ASP.NET Core
 ```
 
 # 
