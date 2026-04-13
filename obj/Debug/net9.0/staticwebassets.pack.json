@@ -1,0 +1,41 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Mi\\Desktop\\fff\\BackEnd-student\\wwwroot\\css\\style.css",
+      "PackagePath": "staticwebassets\\css\\style.css"
+    },
+    {
+      "Id": "C:\\Users\\Mi\\Desktop\\fff\\BackEnd-student\\wwwroot\\html\\about.html",
+      "PackagePath": "staticwebassets\\html\\about.html"
+    },
+    {
+      "Id": "C:\\Users\\Mi\\Desktop\\fff\\BackEnd-student\\wwwroot\\images\\IMG_0585.JPG",
+      "PackagePath": "staticwebassets\\images\\IMG_0585.JPG"
+    },
+    {
+      "Id": "C:\\Users\\Mi\\Desktop\\fff\\BackEnd-student\\wwwroot\\js\\script.js",
+      "PackagePath": "staticwebassets\\js\\script.js"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.BackEnd-student.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.BackEnd-student.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.build.BackEnd-student.props",
+      "PackagePath": "build\\BackEnd-student.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.buildMultiTargeting.BackEnd-student.props",
+      "PackagePath": "buildMultiTargeting\\BackEnd-student.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.buildTransitive.BackEnd-student.props",
+      "PackagePath": "buildTransitive\\BackEnd-student.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

@@ -1,2 +1,2 @@
-console.log("JavaScript ¯®¤ª«îçñ­!"); 
-alert("„®¡à® ¯®¦ «®¢ âì!"); 
+console.log("JavaScript Ð¿Ð¾Ð´ÐºÐ»ÑŽÑ‡Ñ‘Ð½!");
+alert("Ð”Ð¾Ð±Ñ€Ð¾ Ð¿Ð¾Ð¶Ð°Ð»Ð¾Ð²Ð°Ñ‚ÑŒ!");

@@ -32,3 +32,7 @@ C:\Users\Mi\Desktop\fff\BackEnd-student\obj\Debug\net9.0\refint\BackEnd-student.
 C:\Users\Mi\Desktop\fff\BackEnd-student\obj\Debug\net9.0\BackEnd-student.pdb
 C:\Users\Mi\Desktop\fff\BackEnd-student\obj\Debug\net9.0\BackEnd-student.genruntimeconfig.cache
 C:\Users\Mi\Desktop\fff\BackEnd-student\obj\Debug\net9.0\ref\BackEnd-student.dll
+C:\Users\Mi\Desktop\fff\BackEnd-student\bin\Debug\net9.0\BackEnd-student.staticwebassets.runtime.json
+C:\Users\Mi\Desktop\fff\BackEnd-student\obj\Debug\net9.0\compressed\kc1lezegv6-p8qzwkc3ox.gz
+C:\Users\Mi\Desktop\fff\BackEnd-student\obj\Debug\net9.0\compressed\g7flmn6ats-c3t7q5fese.gz
+C:\Users\Mi\Desktop\fff\BackEnd-student\obj\Debug\net9.0\compressed\dpe2evzvn5-ao2cv46y8b.gz
