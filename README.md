@@ -1,4 +1,4 @@
-# Лабораторная работа №9
+# Лабораторная работа №10
 [![.NET 9](https://img.shields.io/badge/.NET-9.0-512BD4)](https://dotnet.microsoft.com/)
 [![C# 13](https://img.shields.io/badge/C%23-13.0-239120)](https://docs.microsoft.com/dotnet/csharp/)
 [![ASP.NET Core](https://img.shields.io/badge/ASP.NET_Core-9.0-512BD4)](https://dotnet.microsoft.com/apps/aspnet)
@@ -16,7 +16,7 @@
 # Склонируйте репозиторий и перейдите в папку проекта
 git clone https://github.com/kondrashov-m/BackEnd-student
 cd BackEnd-student
-git checkout lab9
+git checkout lab10
 
 # Запустите приложение
 dotnet run
@@ -24,12 +24,8 @@ dotnet run
 ## ✨ О программе
 Веб-API приложение, созданное в рамках лабораторной работы по дисциплине "BackEnd-разработка".
 
-Основные преимущества:
-1. Разделение конфигурации по средам — отдельные файлы для Development, Staging, Production
-2. Приоритет источников — переменные среды переопределяют JSON-файлы
-3. Строгая типизация — доступ к настройкам через IOptions<T>
-4. Горячая перезагрузка — изменения в JSON-файлах применяются без перезапуска
-   
+Создано логирование с использованием Middlewares
+
 ## 🛠 Технологии
 ```text
 .NET 9 – кросс-платформенная среда выполнения
