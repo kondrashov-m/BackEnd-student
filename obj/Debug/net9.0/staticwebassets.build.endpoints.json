@@ -599,8 +599,8 @@
       ]
     },
     {
-      "Route": "images/IMG_0585.JPG",
-      "AssetFile": "images/IMG_0585.JPG",
+      "Route": "images/logo.png",
+      "AssetFile": "images/logo.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -613,31 +613,31 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "775010"
+          "Value": "1345595"
         },
         {
           "Name": "Content-Type",
-          "Value": "image/jpeg"
+          "Value": "image/png"
         },
         {
           "Name": "ETag",
-          "Value": "\"2W9Fy8Ct7QO68kMoVAskyMEP1FAzlwUklwEal8D/dFM=\""
+          "Value": "\"bqFsTgCVpfXVJ5D7PySCkYTPThahFXC1y8D7LCldbw0=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Nov 2020 05:10:06 GMT"
+          "Value": "Sat, 31 Aug 2024 19:49:39 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-2W9Fy8Ct7QO68kMoVAskyMEP1FAzlwUklwEal8D/dFM="
+          "Value": "sha256-bqFsTgCVpfXVJ5D7PySCkYTPThahFXC1y8D7LCldbw0="
         }
       ]
     },
     {
-      "Route": "images/IMG_0585.bbll1g1xqu.JPG",
-      "AssetFile": "images/IMG_0585.JPG",
+      "Route": "images/logo.qqpdr02ive.png",
+      "AssetFile": "images/logo.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -650,33 +650,33 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "775010"
+          "Value": "1345595"
         },
         {
           "Name": "Content-Type",
-          "Value": "image/jpeg"
+          "Value": "image/png"
         },
         {
           "Name": "ETag",
-          "Value": "\"2W9Fy8Ct7QO68kMoVAskyMEP1FAzlwUklwEal8D/dFM=\""
+          "Value": "\"bqFsTgCVpfXVJ5D7PySCkYTPThahFXC1y8D7LCldbw0=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Nov 2020 05:10:06 GMT"
+          "Value": "Sat, 31 Aug 2024 19:49:39 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "bbll1g1xqu"
+          "Value": "qqpdr02ive"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-2W9Fy8Ct7QO68kMoVAskyMEP1FAzlwUklwEal8D/dFM="
+          "Value": "sha256-bqFsTgCVpfXVJ5D7PySCkYTPThahFXC1y8D7LCldbw0="
         },
         {
           "Name": "label",
-          "Value": "images/IMG_0585.JPG"
+          "Value": "images/logo.png"
         }
       ]
     },
