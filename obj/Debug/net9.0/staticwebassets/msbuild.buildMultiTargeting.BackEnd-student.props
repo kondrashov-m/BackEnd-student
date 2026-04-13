@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\build\BackEnd-student.props" />
-</Project>
