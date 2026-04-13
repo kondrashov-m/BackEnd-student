@@ -21,6 +21,8 @@
 #### [Лабораторная работа №6. Создание приложения с внедренными зависимостями на основе ASP.NET Core](https://github.com/kondrashov-m/BackEnd-student/tree/lab6)
 #### [Лабораторная работа №7. Работа с middleware в ASP.NET Core](https://github.com/kondrashov-m/BackEnd-student/tree/lab7)
 #### [Лабораторная работа №8. Добавление в веб-приложение на основе ASP.NET Core статических файлов](https://github.com/kondrashov-m/BackEnd-student/tree/lab8)
+#### [Лабораторная работа №9. Конфигурация веб-приложение на основе ASP.NET Core](https://github.com/kondrashov-m/BackEnd-student/tree/lab9)
+
 <!-- 
 ## 🚀 Инструкция по установке
 
