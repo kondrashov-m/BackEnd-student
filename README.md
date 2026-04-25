@@ -24,6 +24,9 @@
 #### [Лабораторная работа №9. Конфигурация веб-приложение на основе ASP.NET Core](https://github.com/kondrashov-m/BackEnd-student/tree/lab9)
 #### [Лабораторная работа №10. Логирование веб-приложение на основе ASP.NET Core](https://github.com/kondrashov-m/BackEnd-student/tree/lab10)
 #### [Лабораторная работа №11. Работа с базами данных в приложении на основе ASP.NET Core](https://github.com/kondrashov-m/BackEnd-student/tree/lab11)
+#### [Лабораторная работа №12. Обработка ошибок в веб-приложении на основе ASP.NET Core](https://github.com/kondrashov-m/BackEnd-student/tree/lab12)
+#### [Лабораторная работа №13. Добавление скриптов JS и стилей CSS в веб-приложение, для использование на стороне фронтенда](https://github.com/kondrashov-m/BackEnd-student/tree/lab13)
+#### [Лабораторная работа №14. Работа с кросс-доменными запросами веб-приложение на основе ASP.NET Core](https://github.com/kondrashov-m/BackEnd-student/tree/lab14)
 <!-- 
 ## 🚀 Инструкция по установке
 
