@@ -16,7 +16,7 @@
 # Склонируйте репозиторий и перейдите в папку проекта
 git clone https://github.com/kondrashov-m/BackEnd-student
 cd BackEnd-student
-git checkout lab3
+git checkout lab5
 
 # Запустите приложение
 dotnet run
