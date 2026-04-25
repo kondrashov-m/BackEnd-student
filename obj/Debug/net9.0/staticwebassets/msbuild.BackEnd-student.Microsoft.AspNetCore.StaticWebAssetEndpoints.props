@@ -1,0 +1,16 @@
+﻿<Project>
+  <ItemGroup>
+    <StaticWebAssetEndpoint Include="_content/BackEnd-student/html/cors-test.html">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\html\cors-test.html'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-Q3ITcMtG6RAv45zQfHmrGYJKQalHbbo47H320Wq1iPM="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"8616"},{"Name":"Content-Type","Value":"text/html"},{"Name":"ETag","Value":"\u0022Q3ITcMtG6RAv45zQfHmrGYJKQalHbbo47H320Wq1iPM=\u0022"},{"Name":"Last-Modified","Value":"Sat, 25 Apr 2026 13:52:33 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/BackEnd-student/html/cors-test.nnvoo9e00m.html">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\html\cors-test.html'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"nnvoo9e00m"},{"Name":"integrity","Value":"sha256-Q3ITcMtG6RAv45zQfHmrGYJKQalHbbo47H320Wq1iPM="},{"Name":"label","Value":"_content/BackEnd-student/html/cors-test.html"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"8616"},{"Name":"Content-Type","Value":"text/html"},{"Name":"ETag","Value":"\u0022Q3ITcMtG6RAv45zQfHmrGYJKQalHbbo47H320Wq1iPM=\u0022"},{"Name":"Last-Modified","Value":"Sat, 25 Apr 2026 13:52:33 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+  </ItemGroup>
+</Project>

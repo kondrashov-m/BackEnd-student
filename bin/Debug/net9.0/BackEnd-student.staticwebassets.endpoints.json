@@ -1,0 +1,304 @@
+{
+  "Version": 1,
+  "ManifestType": "Build",
+  "Endpoints": [
+    {
+      "Route": "html/cors-test.html",
+      "AssetFile": "html/cors-test.html.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000432525952"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2311"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"pTMfqQe7ZZgAOyE2bQeNGz3+r60HYs2Hc3T/nIDw5Cg=\""
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"Q3ITcMtG6RAv45zQfHmrGYJKQalHbbo47H320Wq1iPM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 25 Apr 2026 13:52:33 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Q3ITcMtG6RAv45zQfHmrGYJKQalHbbo47H320Wq1iPM="
+        }
+      ]
+    },
+    {
+      "Route": "html/cors-test.html",
+      "AssetFile": "html/cors-test.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8616"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Q3ITcMtG6RAv45zQfHmrGYJKQalHbbo47H320Wq1iPM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 25 Apr 2026 13:52:33 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Q3ITcMtG6RAv45zQfHmrGYJKQalHbbo47H320Wq1iPM="
+        }
+      ]
+    },
+    {
+      "Route": "html/cors-test.html.gz",
+      "AssetFile": "html/cors-test.html.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2311"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"pTMfqQe7ZZgAOyE2bQeNGz3+r60HYs2Hc3T/nIDw5Cg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 25 Apr 2026 13:52:33 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-pTMfqQe7ZZgAOyE2bQeNGz3+r60HYs2Hc3T/nIDw5Cg="
+        }
+      ]
+    },
+    {
+      "Route": "html/cors-test.nnvoo9e00m.html",
+      "AssetFile": "html/cors-test.html.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000432525952"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2311"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"pTMfqQe7ZZgAOyE2bQeNGz3+r60HYs2Hc3T/nIDw5Cg=\""
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"Q3ITcMtG6RAv45zQfHmrGYJKQalHbbo47H320Wq1iPM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 25 Apr 2026 13:52:33 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "nnvoo9e00m"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Q3ITcMtG6RAv45zQfHmrGYJKQalHbbo47H320Wq1iPM="
+        },
+        {
+          "Name": "label",
+          "Value": "html/cors-test.html"
+        }
+      ]
+    },
+    {
+      "Route": "html/cors-test.nnvoo9e00m.html",
+      "AssetFile": "html/cors-test.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8616"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Q3ITcMtG6RAv45zQfHmrGYJKQalHbbo47H320Wq1iPM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 25 Apr 2026 13:52:33 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "nnvoo9e00m"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Q3ITcMtG6RAv45zQfHmrGYJKQalHbbo47H320Wq1iPM="
+        },
+        {
+          "Name": "label",
+          "Value": "html/cors-test.html"
+        }
+      ]
+    },
+    {
+      "Route": "html/cors-test.nnvoo9e00m.html.gz",
+      "AssetFile": "html/cors-test.html.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2311"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"pTMfqQe7ZZgAOyE2bQeNGz3+r60HYs2Hc3T/nIDw5Cg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 25 Apr 2026 13:52:33 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "nnvoo9e00m"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-pTMfqQe7ZZgAOyE2bQeNGz3+r60HYs2Hc3T/nIDw5Cg="
+        },
+        {
+          "Name": "label",
+          "Value": "html/cors-test.html.gz"
+        }
+      ]
+    }
+  ]
+}
