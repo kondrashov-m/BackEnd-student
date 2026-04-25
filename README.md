@@ -1,16 +1,14 @@
-# Лабораторная работа №11
+# Лабораторная работа №12
 [![.NET 9](https://img.shields.io/badge/.NET-9.0-512BD4)](https://dotnet.microsoft.com/)
 [![C# 13](https://img.shields.io/badge/C%23-13.0-239120)](https://docs.microsoft.com/dotnet/csharp/)
 [![ASP.NET Core](https://img.shields.io/badge/ASP.NET_Core-9.0-512BD4)](https://dotnet.microsoft.com/apps/aspnet)
 [![SQLite](https://img.shields.io/badge/SQLite-3.0-003B57)](https://sqlite.org/)
 [![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 ```text
-Тема: Работа с базами данных в приложении на основе 
-ASP.NET Core
-
+Тема: Обработка ошибок в веб-приложении на основе ASP.NET Core
 ```
 ```text
-Цель работы: Ознакомиться с использованием ORM Entity Framework в приложениях 
+Цель работы: Ознакомиться с основными способами обработки ошибок в веб-приложениях 
 на платформе ASP.NET Core.
 ```
 ## 🚀 Инструкция по установке
@@ -19,7 +17,7 @@ ASP.NET Core
 # Склонируйте репозиторий и перейдите в папку проекта
 git clone https://github.com/kondrashov-m/BackEnd-student
 cd BackEnd-student
-git checkout lab11
+git checkout lab12
 
 # Запустите приложение
 dotnet run
