@@ -1,14 +1,17 @@
-# Лабораторная работа №10
+# Лабораторная работа №11
 [![.NET 9](https://img.shields.io/badge/.NET-9.0-512BD4)](https://dotnet.microsoft.com/)
 [![C# 13](https://img.shields.io/badge/C%23-13.0-239120)](https://docs.microsoft.com/dotnet/csharp/)
 [![ASP.NET Core](https://img.shields.io/badge/ASP.NET_Core-9.0-512BD4)](https://dotnet.microsoft.com/apps/aspnet)
+[![SQLite](https://img.shields.io/badge/SQLite-3.0-003B57)](https://sqlite.org/)
 [![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 ```text
-Тема: Логирование веб-приложение на основе ASP.NET Core
+Тема: Работа с базами данных в приложении на основе 
+ASP.NET Core
 
 ```
 ```text
-Цель работы: Ознакомиться с методами логирования и их применением в веб-приложениях на платформе ASP.NET Core.
+Цель работы: Ознакомиться с использованием ORM Entity Framework в приложениях 
+на платформе ASP.NET Core.
 ```
 ## 🚀 Инструкция по установке
 
@@ -16,15 +19,13 @@
 # Склонируйте репозиторий и перейдите в папку проекта
 git clone https://github.com/kondrashov-m/BackEnd-student
 cd BackEnd-student
-git checkout lab10
+git checkout lab11
 
 # Запустите приложение
 dotnet run
 ```
 ## ✨ О программе
 Веб-API приложение, созданное в рамках лабораторной работы по дисциплине "BackEnd-разработка".
-
-Создано логирование с использованием Middlewares
 
 ## 🛠 Технологии
 ```text
