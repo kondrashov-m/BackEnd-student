@@ -1,9 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using EFDemo.Data;
-using EFDemo.Models;
+using BackEnd_student.Data;
+using BackEnd_student.Models;
 
-namespace EFDemo.Controllers;
+namespace BackEnd_student.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]

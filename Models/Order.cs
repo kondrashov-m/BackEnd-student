@@ -1,4 +1,4 @@
-namespace EFDemo.Models;
+namespace BackEnd_student.Models;
 
 public class Order
 {

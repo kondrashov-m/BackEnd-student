@@ -3578,11 +3578,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Mi\\Desktop\\fff\\BackEnd-student\\EFDemo\\EFDemo.csproj",
-      "projectName": "EFDemo",
-      "projectPath": "C:\\Users\\Mi\\Desktop\\fff\\BackEnd-student\\EFDemo\\EFDemo.csproj",
+      "projectUniqueName": "C:\\Users\\Mi\\Desktop\\fff\\BackEnd-student\\BackEnd-student.csproj",
+      "projectName": "BackEnd-student",
+      "projectPath": "C:\\Users\\Mi\\Desktop\\fff\\BackEnd-student\\BackEnd-student.csproj",
       "packagesPath": "C:\\Users\\Mi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Mi\\Desktop\\fff\\BackEnd-student\\EFDemo\\obj\\",
+      "outputPath": "C:\\Users\\Mi\\Desktop\\fff\\BackEnd-student\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

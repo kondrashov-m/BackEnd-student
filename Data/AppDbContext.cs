@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
-using EFDemo.Models;
+using BackEnd_student.Models;
 
-namespace EFDemo.Data;
+namespace BackEnd_student.Data;
 
 public class AppDbContext : DbContext
 {

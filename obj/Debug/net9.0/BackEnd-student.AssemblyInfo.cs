@@ -10,12 +10,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("EFDemo")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("BackEnd-student")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5ae4271408c68a1573dde600501fc333af8eca1b")]
-[assembly: System.Reflection.AssemblyProductAttribute("EFDemo")]
-[assembly: System.Reflection.AssemblyTitleAttribute("EFDemo")]
+[assembly: System.Reflection.AssemblyProductAttribute("BackEnd-student")]
+[assembly: System.Reflection.AssemblyTitleAttribute("BackEnd-student")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // Создано классом WriteCodeFragment MSBuild.

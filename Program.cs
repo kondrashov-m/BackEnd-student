@@ -1,5 +1,5 @@
+﻿using BackEnd_student.Data;
 using Microsoft.EntityFrameworkCore;
-using EFDemo.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
