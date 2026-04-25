@@ -1,15 +1,15 @@
-# Лабораторная работа №12
+# Лабораторная работа №14
 [![.NET 9](https://img.shields.io/badge/.NET-9.0-512BD4)](https://dotnet.microsoft.com/)
 [![C# 13](https://img.shields.io/badge/C%23-13.0-239120)](https://docs.microsoft.com/dotnet/csharp/)
 [![ASP.NET Core](https://img.shields.io/badge/ASP.NET_Core-9.0-512BD4)](https://dotnet.microsoft.com/apps/aspnet)
 [![SQLite](https://img.shields.io/badge/SQLite-3.0-003B57)](https://sqlite.org/)
 [![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 ```text
-Тема: Обработка ошибок в веб-приложении на основе ASP.NET Core
+Тема: Работа с кросс-доменными запросами веб-приложение на основе ASP.NET Core
 ```
 ```text
-Цель работы: Ознакомиться с основными способами обработки ошибок в веб-приложениях 
-на платформе ASP.NET Core.
+Цель работы: Ознакомиться с настройкой и использованием механизма CORS для 
+обработки кросс-доменных запросов в приложениях на платформе ASP.NET Core.
 ```
 ## 🚀 Инструкция по установке
 
@@ -17,7 +17,7 @@
 # Склонируйте репозиторий и перейдите в папку проекта
 git clone https://github.com/kondrashov-m/BackEnd-student
 cd BackEnd-student
-git checkout lab12
+git checkout lab14
 
 # Запустите приложение
 dotnet run
