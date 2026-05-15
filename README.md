@@ -17,7 +17,7 @@ ASP.NET Core для управления информацией на клиен�
 # Склонируйте репозиторий и перейдите в папку проекта
 git clone https://github.com/kondrashov-m/BackEnd-student
 cd BackEnd-student
-git checkout lab14
+git checkout lab15
 
 # Запустите приложение
 dotnet run
