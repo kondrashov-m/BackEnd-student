@@ -1,15 +1,15 @@
-# Лабораторная работа №14
+# Лабораторная работа №15
 [![.NET 9](https://img.shields.io/badge/.NET-9.0-512BD4)](https://dotnet.microsoft.com/)
 [![C# 13](https://img.shields.io/badge/C%23-13.0-239120)](https://docs.microsoft.com/dotnet/csharp/)
 [![ASP.NET Core](https://img.shields.io/badge/ASP.NET_Core-9.0-512BD4)](https://dotnet.microsoft.com/apps/aspnet)
 [![SQLite](https://img.shields.io/badge/SQLite-3.0-003B57)](https://sqlite.org/)
 [![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 ```text
-Тема: Работа с кросс-доменными запросами веб-приложение на основе ASP.NET Core
+Тема: Изучение состояний в веб-приложение на основе ASP.NET Core
 ```
 ```text
-Цель работы: Ознакомиться с настройкой и использованием механизма CORS для 
-обработки кросс-доменных запросов в приложениях на платформе ASP.NET Core.
+Цель работы: Познакомиться с основами работы с состояниями в веб-приложениях на платформе
+ASP.NET Core для управления информацией на клиентской и серверной сторонах.
 ```
 ## 🚀 Инструкция по установке
 
