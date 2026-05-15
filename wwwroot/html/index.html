@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Состояния в ASP.NET Core - Лабораторная №15</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🔐 Управление состояниями в ASP.NET Core</h1>
+        <p class="subtitle">Cookies | Server Sessions | localStorage | sessionStorage</p>
+        
+        <div class="state-grid">
+            <!-- Блок 1: Cookies -->
+            <div class="state-card">
+                <h2>🍪 Cookies (сервер)</h2>
+                <div class="input-group">
+                    <input type="text" id="cookieValue" placeholder="Введите значение">
+                    <button onclick="setCookie()">Сохранить в Cookie</button>
+                    <button onclick="deleteCookie()" class="btn-danger">Удалить Cookie</button>
+                </div>
+                <div id="cookieDisplay">Загрузка...</div>
+                <small>⏱️ Хранится 7 дней | Доступны во всех вкладках</small>
+            </div>
+            
+            <!-- Блок 2: Server Sessions -->
+            <div class="state-card">
+                <h2>🔒 Server Sessions</h2>
+                <div class="input-group">
+                    <input type="text" id="sessionValue" placeholder="Введите значение">
+                    <button onclick="setSession()">Сохранить в сессию</button>
+                    <button onclick="clearSession()" class="btn-danger">Очистить сессию</button>
+                </div>
+                <div id="sessionDisplay">Загрузка...</div>
+                <small>⏱️ Хранится 30 минут | Данные на сервере</small>
+            </div>
+            
+            <!-- Блок 3: localStorage -->
+            <div class="state-card">
+                <h2>💾 localStorage (клиент)</h2>
+                <div class="input-group">
+                    <input type="text" id="lsValue" placeholder="Введите значение">
+                    <button onclick="saveToLocalStorage()">Сохранить в localStorage</button>
+                    <button onclick="clearLocalStorage()" class="btn-danger">Очистить</button>
+                </div>
+                <div id="lsDisplay">Загрузка...</div>
+                <small>⏱️ Хранится постоянно | Доступен во всех вкладках</small>
+            </div>
+            
+            <!-- Блок 4: sessionStorage -->
+            <div class="state-card">
+                <h2>📋 sessionStorage (клиент)</h2>
+                <div class="input-group">
+                    <input type="text" id="ssValue" placeholder="Введите значение">
+                    <button onclick="saveToSessionStorage()">Сохранить в sessionStorage</button>
+                    <button onclick="clearSessionStorage()" class="btn-danger">Очистить</button>
+                </div>
+                <div id="ssDisplay">Загрузка...</div>
+                <small>⏱️ Хранится до закрытия вкладки</small>
+            </div>
+        </div>
+        
+        <!-- Таблица сравнения -->
+        <div style="margin-top: 40px;">
+            <h2>📊 Сравнение механизмов хранения состояния</h2>
+            <table class="comparison-table">
+                <thead>
+                    <tr><th>Механизм</th><th>Сторона</th><th>Время жизни</th><th>Доступность</th><th>Объём данных</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>🍪 Cookies</td><td>Сервер/Клиент</td><td>Настраиваемое (7 дней)</td><td>Все вкладки</td><td>4 KB</td></tr>
+                    <tr><td>🔒 Server Sessions</td><td>Сервер</td><td>30 минут (по умолчанию)</td><td>Один пользователь</td><td>Неограниченно</td></tr>
+                    <tr><td>💾 localStorage</td><td>Клиент</td><td>Постоянно</td><td>Все вкладки</td><td>5-10 MB</td></tr>
+                    <tr><td>📋 sessionStorage</td><td>Клиент</td><td>До закрытия вкладки</td><td>Только текущая вкладка</td><td>5-10 MB</td></tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div style="margin-top: 30px; text-align: center; font-size: 12px; color: #999;">
+            <p>Лабораторная работа №15 — Изучение состояний в ASP.NET Core</p>
+        </div>
+    </div>
+    
+    <script src="/js/app.js"></script>
+</body>
+</html>
