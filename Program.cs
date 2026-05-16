@@ -14,7 +14,7 @@ builder.Services.AddResponseCaching();
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-
+builder.Services.AddScoped<ICacheService, MemoryCacheService>();
 var app = builder.Build();
 
 app.UseResponseCaching(); 
