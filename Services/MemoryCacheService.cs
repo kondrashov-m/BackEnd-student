@@ -11,9 +11,9 @@ public class MemoryCacheService : ICacheService
         _cache = cache;
     }
 
-    public T Get<T>(string key)
+    public T? Get<T>(string key)
     {
-        _cache.TryGetValue(key, out T value);
+        _cache.TryGetValue(key, out T? value);
         return value;
     }
 
