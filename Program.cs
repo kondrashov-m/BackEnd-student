@@ -1,26 +1,30 @@
+using OpenTelemetry;
 using OpenTelemetry.Metrics;
 using OpenTelemetry.Resources;
+using BackEnd_student.Metrics;
 
 var builder = WebApplication.CreateBuilder(args);
+
 
 var serviceName = "BackEnd-student";
 var serviceVersion = "1.0.0";
 
-builder.Services.AddOpenTelemetry()
-    .ConfigureResource(resource => resource
+var meterProvider = Sdk.CreateMeterProviderBuilder()
+    .SetResourceBuilder(ResourceBuilder.CreateDefault()
         .AddService(serviceName, serviceVersion: serviceVersion)
         .AddAttributes(new Dictionary<string, object>
         {
             ["deployment.environment"] = "development",
             ["service.version"] = serviceVersion
         }))
-    .WithMetrics(metrics => metrics
-        .AddAspNetCoreInstrumentation()
-        .AddHttpClientInstrumentation()
-        .AddRuntimeInstrumentation()
-        .AddPrometheusExporter()
-        .AddMeter("BackEnd.Metrics")
-    );
+    .AddAspNetCoreInstrumentation()
+    .AddHttpClientInstrumentation()
+    .AddRuntimeInstrumentation()
+    .AddPrometheusExporter()
+    .Build();
+
+builder.Services.AddSingleton(meterProvider);
+builder.Services.AddSingleton<AppMetrics>();
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
